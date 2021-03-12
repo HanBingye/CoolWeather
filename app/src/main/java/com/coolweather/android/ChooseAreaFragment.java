@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.Country;
@@ -78,10 +80,18 @@ public class ChooseAreaFragment extends Fragment {
                     queryCountry();
                 }else if(currentLevel==LEVEL_COUNTRY){
                     String weatherId=countryList.get(position).getWeatherId();
+                    if(getActivity()instanceof MainActivity){
                     Intent intent=new Intent(getActivity(),WeatherActivity.class);
                     intent.putExtra("weather_id",weatherId);
                     startActivity(intent);
                     getActivity().finish();
+                    }else if(getActivity()instanceof WeatherActivity){
+                        WeatherActivity activity = (WeatherActivity) getActivity();
+                        activity.drawerLayout.closeDrawer(GravityCompat.START);
+                        activity.swipeRefresh.setRefreshing(true);
+                        activity.requestWeather(weatherId);
+
+                    }
                 }
             }
         });
