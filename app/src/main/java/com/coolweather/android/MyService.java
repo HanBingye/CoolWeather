@@ -27,8 +27,7 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return null;
     }
 
     @Override
@@ -42,9 +41,6 @@ public class MyService extends Service {
         PendingIntent pi=PendingIntent.getService(this,0,i,0);
         alarmManager.cancel(pi);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,alarTime,pi);
-
-
-
         return super.onStartCommand(intent, flags, startId);
     }
 
