@@ -61,7 +61,7 @@ public class ChooseAreaFragment extends Fragment {
         tv_title = view.findViewById(R.id.tv_title);
         bt_back = view.findViewById(R.id.bt_back);
         lv_show = view.findViewById(R.id.lv_show);
-        adapter = new ArrayAdapter<>(getContext(), R.layout.support_simple_spinner_dropdown_item, list);
+        adapter = new ArrayAdapter<>(getContext(), R.layout.listview_item, list);
         lv_show.setAdapter(adapter);
         return view;
     }

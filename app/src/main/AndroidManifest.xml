@@ -6,7 +6,6 @@
 
     <application
         android:name="org.litepal.LitePalApplication"
-
         android:allowBackup="true"
         android:icon="@mipmap/ko"
         android:label="@string/app_name"
@@ -15,9 +14,11 @@
         android:theme="@style/Theme.CoolWeather"
         android:usesCleartextTraffic="true">
         <service
-            android:name=".MyService"
+            android:name=".service.AutoUpdateService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+
+        </service>
 
         <activity android:name=".WeatherActivity" />
         <activity android:name=".MainActivity">

@@ -2,7 +2,12 @@ plugins {
     id 'com.android.application'
 }
 
+
 android {
+lintOptions{
+    checkReleaseBuilds false
+    abortOnError false
+}
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
 

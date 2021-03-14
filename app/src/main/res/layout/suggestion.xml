@@ -6,22 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
+        android:textColor="#fff"
         android:text="生活建议"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:textColor="#fff"
         android:id="@+id/tv_comfort"
       android:layout_margin="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:textColor="#fff"
         android:id="@+id/tv_washCar"
         android:layout_margin="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:textColor="#fff"
         android:id="@+id/tv_sport"
         android:layout_margin="15dp"
         android:layout_width="wrap_content"
